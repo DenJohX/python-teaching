@@ -1,11 +1,13 @@
 from django.conf.urls.defaults import patterns, include, url
+from django.http import HttpResponseRedirect
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
+     url(r'^$', lambda x: HttpResponseRedirect('/teaching/')),
+   # Examples:
     url(r'^teaching/', include('teaching.urls')),
     url(r'^chatroom/', include('chatroom.urls')),
     # url(r'^djangoteaching/', include('djangoteaching.foo.urls')),
