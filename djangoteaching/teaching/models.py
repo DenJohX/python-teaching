@@ -6,5 +6,5 @@ class TeachingChat(models.Model):
     author = models.CharField(max_length=150)
 
 class TeachingConsole(models.Model):
-    text = models.CharField(max_length=200)
+    text = models.TextField()
     pub_date = models.DateTimeField('date published')
