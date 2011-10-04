@@ -1,4 +1,8 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
 
 {% block content %}
 <h1>Nuevo envio</h1>
@@ -7,7 +11,7 @@
 
 <form method="post">
 {% csrf_token %}
-    <input type="text" name="text" />
+<textarea type="text" name="text" id="text"> </textarea>
 <input type="submit" value="Enviar" />
 </form>
 {% endblock %}
@@ -18,16 +22,23 @@
 <script type="text/javascript" src="/static/js/jquery.js" >
 </script>
 <script type="text/javascript">
-$(document).ready(function(){
-    $('form').submit(function() {
-        var data = $(this).serializeArray();
-        $.ajax({
-            data:
+/*    jQuery(document).ready(function($){
+        $('form').submit(function(ev) {
+            ev.preventDefault();
+            var data = $(this).serializeArray();
+            $.ajax({
+                type: 'POST',
+                data: data,
+                url: '/teaching/send/',
+                success: function(rsp){
+                    alert('enviado');
+                }
+            });
+            return false
         });
-
-         return false
-        
-    });
- });
+        });
+        */
 </script>
 {% endblock %}
+</body>
+</html>

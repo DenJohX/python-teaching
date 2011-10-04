@@ -2,9 +2,11 @@ jQuery(document).ready(function($){
     chatForm = $('#chatroom_form');
     chatField = $('#chatroom_send_text');
     chatWindow = $('#chatroom_chat');
-    CHATROOM_AUTHOR = prompt('Bienvenido, ingrese su nick');
+    //CHATROOM_AUTHOR = prompt('Bienvenido, ingrese su nick');
     min_poll_date = 0
     chatroom_poll_wait = 100;
+
+
 
     chatroom_poll_wait_inc = function(){
         if (chatroom_poll_wait < 2000){
@@ -26,7 +28,6 @@ jQuery(document).ready(function($){
                     min_poll_date = data[data.length-1].d
                 }else{
                     chatroom_poll_wait_inc();
-                    console.debug(chatroom_poll_wait);
                 }
             },
             failure: function(){
@@ -87,5 +88,4 @@ jQuery(document).ready(function($){
         return false;
     });
 
-    setTimeout('chatroom_poll()',6000);
 });

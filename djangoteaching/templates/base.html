@@ -3,38 +3,73 @@
     <head>
         <link href="/static/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
         <link href="/static/css/print.css" media="print" rel="stylesheet" type="text/css" />
-        <!--[if lt IE 8]>
-            <link href="/static/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-        <![endif]-->
-        <title>{% block title %} Titulo {% endblock %} </title>
+        <link href="/static/css/vendor/jquery-ui/ui-darkness/jquery-ui.css"
+        media="screen" rel="stylesheet" type="text/css">
+        <title>{% block title %} Curso de python3 {% endblock %} </title>
     </head>
     <body class="bp two-col">
         <div id="container">
+            <a href="https://github.com/DenJohX/python-teaching"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/4c7dc970b89fd04b81c8e221ba88ff99a06c6b61/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub"></a>
             <header id="mainheader">
-            <h1> Teaching Python3 </h1>
-            <p>Una plataforma para la enseñanza de python</p>
+            <div id="logo">
+                <img src="/static/img/python-logo.png" class="fl" />
+            </div>
+            <div id="titlediv">
+                <h1 id="title"> Curso de python3 </h1>
+                <span id="slogan">Una plataforma para la enseñanza de python3 </span>
+            </div>
             </header>
             <div id="content">
-                <h1> Contenido </h1>
             {% block content %}
             {% endblock %}
             </div>
 
 
             <aside id="sidebar">
-            <h2> Python teaching </h2>
-            <p> Un proyecto para enseñar y expandir el uso de python </p>
-            <p> Se usa la version 3.2 de python </p>
             {% include 'chatroom_div.html' %}
             {% block sidebar %}
             {% endblock %}
-            {% block chatroom %}
-            {% endblock %}
             </aside>
+
+            <footer id="mainfooter">
+                <a href="http://www.djangoproject.com/" target="_blank" ><img
+                src="http://media.djangoproject.com/img/badges/djangomade124x25_grey.gif"
+                border="0" alt="Made with Django." title="Made with Django." /></a>
+                <a href="http://www.python.org/" target="_blank"><img
+                src="http://www.python.org/community/logos/python-powered-w-70x28.png"
+                alt="Python powered" title="Python powered"
+                /></a>
+                <a href="http://jquery.com" target="_blank"><img
+                src="http://www.pcscanadarosal.com/ligamanager/images/powered/jquery.gif"
+                alt="jQuery powered" title="jQuery powered"
+                /></a>
+            </footer>
+
         </div>
-        <script type="application/javascript" src="/static/js/jquery.js">
+
+<div id="dialog-form" title="Create new user">
+	<p class="validateTips">Ingrese su nombre de usuario.</p>
+
+	<form>
+	<fieldset>
+		<label for="name">Nombre de usuario</label>
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+	</fieldset>
+	</form>
+</div>
+
+
+        <script type="application/javascript"
+            src="/static/js/vendor/jquery/jquery.min.js">
         </script>
+        <script type="application/javascript"
+            src="/static/js/vendor/jquery/jquery-ui.min.js">
+        </script>
+        
         <script type="application/javascript" src="/static/js/dj_csrf_allow.js">
+        </script>
+
+        <script type="application/javascript" src="/static/js/general.js">
         </script>
         <script type="text/javascript">
             CHATROOM_SEND_URL = '/chatroom/send/';

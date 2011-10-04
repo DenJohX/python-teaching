@@ -35,13 +35,9 @@ def index(request):
     return render(request, 'index.html')
 
 def send_console(request):
-    try:
+    if ('text' in request.POST):
         text = request.POST['text']
-    except:
-        pass
-    else:
         n = TeachingConsole(text=text, pub_date=datetime.now())
         n.save();
 
     return render(request, 'send.html')
-

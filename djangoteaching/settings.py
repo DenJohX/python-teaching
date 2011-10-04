@@ -6,7 +6,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Dennis Xiloj', 'your_email@example.com'),
+    ('Administrator', 'your_email@example.com'),
 )
 
 MANAGERS = ADMINS
@@ -14,11 +14,11 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'djteach',                      # Or path to database file if using sqlite3.
-        'USER': 'club3',                      # Not used with sqlite3.
-        'PASSWORD': 'Morocha',                  # Not used with sqlite3.
-        'HOST': 'clubpython3-hkx.dotcloud.com',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '14553',                      # Set to empty string for default. Not used with sqlite3.
+        'NAME': 'pythonteaching',                      # Or path to database file if using sqlite3.
+        'USER': 'pyteaching',                      # Not used with sqlite3.
+        'PASSWORD': 'pyteaching',                  # Not used with sqlite3.
+        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
@@ -45,22 +45,20 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
-
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = '/home/dotcloud/data/media/'
+MEDIA_ROOT = ''
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-
-MEDIA_URL = '/media/'
+MEDIA_URL = ''
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = '/home/dotcloud/data/static/'
+STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -78,7 +76,6 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(os.path.dirname(__file__),'../static'),
 )
-
 
 
 # List of finder classes that know how to find static files in

@@ -5,13 +5,16 @@ from time import sleep, time, mktime
 from random import random
 from chatroom.models import chatroomMessages
 from datetime import datetime
+from django.utils import html
 
 def index(request):
     return render(request,'chatroom.html')
 
 def send(request):
     if ('txt' in request.POST and 'a' in request.POST):
-        newMsg = chatroomMessages(text=request.POST['txt'],author=request.POST['a'])
+        txt = html.urlize(html.escape(request.POST['txt']))
+        author = html.escape(request.POST['a'])
+        newMsg = chatroomMessages(text=txt, author=author)
         newMsg.save()
         response = simplejson.dumps({'success':True})
     else:
