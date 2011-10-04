@@ -6,19 +6,19 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Administrator', 'your_email@example.com'),
+    ('Dennis Xiloj', 'your_email@example.com'),
 )
 
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'dbname',                      # Or path to database file if using sqlite3.
-        'USER': 'dbuser',                      # Not used with sqlite3.
-        'PASSWORD': 'dbuser_password',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'djteach',                      # Or path to database file if using sqlite3.
+        'USER': 'club3',                      # Not used with sqlite3.
+        'PASSWORD': 'Morocha',                  # Not used with sqlite3.
+        'HOST': 'clubpython3-hkx.dotcloud.com',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '14553',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
