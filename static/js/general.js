@@ -45,6 +45,7 @@ jQuery(document).ready(function($){
 			width: 380,
 			modal: true,
             closeOnEscape: false,
+            open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); },
 
 			buttons: {
 				"Ingresar al curso": function() {
