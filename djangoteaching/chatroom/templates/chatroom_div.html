@@ -10,6 +10,7 @@
     </div>
     <div id="chatroom_send">
         <form id="chatroom_form">
+            {% csrf_token %}
             <input id="chatroom_send_text" type="text"></input>
         </form>
     </div>

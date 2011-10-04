@@ -87,5 +87,5 @@ jQuery(document).ready(function($){
         return false;
     });
 
-    chatroom_poll();
+    setTimeout('chatroom_poll()',6000);
 });
