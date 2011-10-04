@@ -1,0 +1,14 @@
+# pyc
+*.pyc
+
+# vim swp, cache
+*.swp
+*.swo
+*~
+
+# sass-cache
+.sass-cache/
+
+
+# personal settings
+settings.py*
