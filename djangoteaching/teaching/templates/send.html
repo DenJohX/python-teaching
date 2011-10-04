@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Nuevo envio</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form method="post">
+{% csrf_token %}
+    <input type="text" name="text" />
+<input type="submit" value="Enviar" />
+</form>
+{% endblock %}
+
+
+
+{% block scripts %}
+<script type="text/javascript" src="/static/js/jquery.js" >
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('form').submit(function() {
+        var data = $(this).serializeArray();
+        $.ajax({
+            data:
+        });
+
+         return false
+        
+    });
+ });
+</script>
+{% endblock %}

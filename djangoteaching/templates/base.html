@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="/static/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        <link href="/static/css/print.css" media="print" rel="stylesheet" type="text/css" />
+        <!--[if lt IE 8]>
+            <link href="/static/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        <![endif]-->
+        <title>{% block title %} Titulo {% endblock %} </title>
+    </head>
+    <body class="bp two-col">
+        <div id="container">
+            <header id="mainheader">
+            <h1> Teaching Python3 </h1>
+            <p>Una plataforma para la enseñanza de python</p>
+            </header>
+            <div id="content">
+                <h1> Contenido </h1>
+            {% block content %}
+            {% endblock %}
+            </div>
+
+
+            <aside id="sidebar">
+            <h2> Python teaching </h2>
+            <p> Un proyecto para enseñar y expandir el uso de python </p>
+            <p> Se usa la version 3.2 de python </p>
+            {% include 'chatroom_div.html' %}
+            {% block sidebar %}
+            {% endblock %}
+            {% block chatroom %}
+            {% endblock %}
+            </aside>
+        </div>
+        <script type="application/javascript" src="/static/js/jquery.js">
+        </script>
+        <script type="application/javascript" src="/static/js/dj_csrf_allow.js">
+        </script>
+        <script type="text/javascript">
+            CHATROOM_SEND_URL = '/chatroom/send/';
+            CHATROOM_POLL_URL = '/chatroom/poll/';
+        </script>
+        {% include 'chatroom_scripts.html' %}
+        {% block scripts %}
+        {% endblock %}
+    </body>
+</html>
+

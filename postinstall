@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python blog/manage.py collectstatic --noinput
