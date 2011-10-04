@@ -49,6 +49,7 @@ form
   +container
 #mainheader, #mainfooter
   +column($blueprint-grid-columns)
+  height: 10%
 #sidebar
   // One third of the grid columns, rounding down. With 24 cols, this is 8.
   $sidebar-columns: floor($blueprint-grid-columns / 3)
@@ -75,7 +76,6 @@ form
     +push(1)
     background: #202020
     +box-shadow(#000 0 0 5px inset, rgba(white, .3) 0 1px 3px)
-    max-height: 40em
     overflow: auto
     //white-space: pre
     p
@@ -88,7 +88,6 @@ form
   #chatroom_chat
     background: #020202
     color: #f0f0f0
-    max-height: 30em
     overflow: auto
     p
       margin: 0 1em

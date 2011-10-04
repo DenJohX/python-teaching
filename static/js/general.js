@@ -60,6 +60,7 @@ jQuery(document).ready(function($){
                         CHATROOM_AUTHOR = name.val();
                         chatroom_poll();
                         console_poll();
+                        autoAdjustWindows();
 						$( this ).dialog( "close" );
 
 					}
@@ -69,4 +70,17 @@ jQuery(document).ready(function($){
 				name.val( "" ).removeClass( "ui-state-error" );
 			}
 		});
+
+    autoAdjustWindows = function(){
+        var chatWindow = $('#chatroom_chat');
+        var consoleWindow = $('#rsp');
+
+        var height = $(window).height() - 130;
+
+        chatWindow.css('height', height - 25);
+        consoleWindow.css('height',height);
+    }
+    $(window).resize(function(){
+        autoAdjustWindows();
+    });
 });
