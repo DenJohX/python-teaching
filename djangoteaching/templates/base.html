@@ -19,6 +19,7 @@
                 <span id="slogan">Una plataforma para la enseñanza de python3 </span>
             </div>
             </header>
+            <article id="maincontent">
             <div id="content">
             {% block content %}
             {% endblock %}
@@ -26,10 +27,17 @@
 
 
             <aside id="sidebar">
+            <h3> INFO </h3>
+            <div class="sideblock">
+                <a target="_blank" href="https://github.com/DenJohX/curso-python3">
+                    Repo en GitHub
+                </a>
+            </div>
             {% include 'chatroom_div.html' %}
             {% block sidebar %}
             {% endblock %}
             </aside>
+            </article>
 
             <footer id="mainfooter">
             <p> Construído utilizando 

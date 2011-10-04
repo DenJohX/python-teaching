@@ -75,9 +75,9 @@ jQuery(document).ready(function($){
         var chatWindow = $('#chatroom_chat');
         var consoleWindow = $('#rsp');
 
-        var height = $(window).height() - 130;
+        var height = $(window).height() - 150;
 
-        chatWindow.css('height', height - 25);
+        chatWindow.css('height', height - 180);
         consoleWindow.css('height',height);
     }
     $(window).resize(function(){
