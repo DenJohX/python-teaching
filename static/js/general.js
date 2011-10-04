@@ -31,6 +31,12 @@ jQuery(document).ready(function($){
 
 
         var name = $( "#name" );
+        var form_name = $( '#username_input' );
+        form_name.submit(function(evt){
+            evt.preventDefault();
+            return false;
+        });
+
         tips = $( ".validateTips" );
 
         $( "#dialog-form" ).dialog({
