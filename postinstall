@@ -1,3 +1,4 @@
 #!/bin/bash
 
+cp /home/dotcloud/configs/settings.py /home/dotcloud/code/djangoteaching/settings.py
 python djangoteaching/manage.py collectstatic --noinput
